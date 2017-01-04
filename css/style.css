@@ -270,6 +270,15 @@ body {
     width: 100%;
 }
 
+.resume a {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 300px;
+    font-size: 80px;
+    
+}
+
 .line {
     width: 100%;
     height: 2px;
