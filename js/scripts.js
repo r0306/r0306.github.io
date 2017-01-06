@@ -35,5 +35,9 @@ $(document).ready(function () {
     });
     $('.navbar').on('dragstart', function (event) { event.preventDefault(); });
     document.getElementById('hi').ondragstart = function () { return false; };
+    $('.hidden-link').click(function (e) {
+        e.stopPropagation();
+        $(this).find('a')[0].click();
+    });
 });
 

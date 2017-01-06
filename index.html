@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#0">
+                        <a href="#contact">
                             <b>Contact</b>
                             <span><i class="ion-android-mail icon"></i></span>
                         </a>
@@ -102,7 +102,18 @@
                 <div class="column-content">Tools - <span class="highlight">Git, jQuery, UNIX, Eclipse, Netbeans, Android Studio, JUnit, Espresso, Robolectric, JIRA, CircleCI</span></div>
             </div>
         </div>
-        <div class="resume-link"><a class="hidden-link" href="RobertLuResume.pdf" target="_blank">View Resume</a></div>
+        <div class="resume-link hidden-link"><span>View Resume</span><a class="hidden-link" href="RobertLuResume.pdf" target="_blank"></a></div>
+    </div>
+    <div class="contact" id="contact">
+        <span class="projects-text">Contact Me</span>
+        <form class="contact-form" action="email.php" method="POST">
+            <span class="name-tag">Name*</span>
+            <input class="name-field" type="text" name="Name" required>
+            <span class="email-tag">Email*</span>
+            <input class="email-field" type="text" name="Email" required>
+            <span class="message-tag">Message*</span>
+            <textarea class="message-field" rows="5" name="Message" cols="30" required> </textarea>
+        </form>
     </div>
 </body>
 
