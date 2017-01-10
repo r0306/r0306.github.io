@@ -88,7 +88,7 @@
                 <div class="column-content">Languages - <span class="highlight">Java, C, C++, Javascript, HTML5/CSS3</span></div>
                 <div class="column-content">Platforms - <span class="highlight">Windows, Linux, Android</span></div>
                 <div class="column-content">Techniques - <span class="highlight">Agile Software Development, Object-Oriented Design, Design by Contract, Refactoring, Testing with Continuous Integration</span></div>
-            </div>
+            </div>  
             <div class="column">
                 <div class="circle"><i class="ion-university"></i></div>
                 <div class="column-title">Education</div>
@@ -108,11 +108,24 @@
         <span class="projects-text">Contact Me</span>
         <form class="contact-form" action="email.php" method="POST">
             <span class="name-tag">Name*</span>
-            <input class="name-field" type="text" name="Name" required>
+            <div class="name-div">
+                <i class="ion-person"></i>
+                <div class="vertical-wrapper">
+                    <div class="vertical-line"></div>
+                </div>
+                <input class="name-field" type="text" name="Name" required>
+            </div>
             <span class="email-tag">Email*</span>
-            <input class="email-field" type="text" name="Email" required>
+            <div class="email-div">
+                <i class="ion-ios-email"></i>
+                <div class="vertical-wrapper">
+                    <div class="vertical-line"></div>
+                </div>
+                <input class="email-field" type="text" name="Email" required>
+            </div>
             <span class="message-tag">Message*</span>
-            <textarea class="message-field" rows="5" name="Message" cols="30" required> </textarea>
+            <textarea class="message-field" rows="5" name="Message" cols="30" required></textarea>
+            <div class="send">Send</div>
         </form>
     </div>
 </body>

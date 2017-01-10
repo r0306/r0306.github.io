@@ -218,7 +218,7 @@ body {
 }
 
 .highlight {
-    color: #00FF00;
+    color: #66CCFF;
 }
 
 .hi {
@@ -239,13 +239,15 @@ body {
 
 .projects {
     display: inline-block;
+    text-align: center;
+    align-content: center;
     background: #F0F0F0;
     height: 100%;
     width: 100%;
 }
 
 .projects-text {
-    position: absolute;
+    position: relative;
     width: 100%;
     text-align: center;
     padding-top: 50px;
@@ -255,6 +257,7 @@ body {
 }
 
 .resume {
+    text-align: center;
     display: inline-block;
     background: #FFFFFF;
     height: 100%;
@@ -322,9 +325,9 @@ body {
 }
 
 .resume-link:hover {
-    background-color: #00FF00;
+    background-color: #66A3FF;
     border: 3px solid;
-    box-shadow: inset 0 0 50px rgba(255, 255, 255, .5), 0 0 50px rgba(255, 255, 255, .5);
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, .5), 0 0 30px rgba(255, 255, 255, .5);
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
     transition: 0.2s ease;
@@ -332,7 +335,7 @@ body {
 }
 
 .resume-link:active {
-    background-color: #00CC00;
+    background-color: #0066FF;
     text-shadow: 1px 1px 2px #427388;    
 }
 
@@ -343,6 +346,8 @@ body {
 }
 
 .contact {
+    display: block;
+    text-align: center;
     align-content: center;
     background: #F0F0F0;
     height: 100%;
@@ -351,47 +356,112 @@ body {
 }
 
 .contact-form {
+    position: relative;
+    align-content: center;
     font-family: prime;
-    padding-top: 200px;
+    padding-top: 100px;
     height: 100%;
     width: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 2.0em;
+    text-align: left;
 }
 
-.contact-form input, .contact-form textarea {
+.name-div, .email-div {
+    position: relative;
     font-size: 0.8em;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
+    align-content: center;
+    background: #FFFFFF;
+    margin-bottom: 25px;
     border: 3px solid #454545;
     width: 100%;
-    padding-left: 5px;
-}
-
-.contact-form input:focus {
-    border-color: #000000;
-    color: #09B300;
-}
-
-.contact-name span{
-    text-transform: uppercase;
-}
-
-.name-field {
     height: 50px;
-    margin-bottom: 30px;
 }
 
-.email-field {
-    height: 50px;
-    margin-bottom: 30px;    
+.name-div i, .email-div i {
+    position: relative;
+    display: inline-block;
+    vertical-align: center;
+    color: #888888;
+    font-size: 30px;
+    line-height: 50px;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    opacity: 0.7;
+}
+
+.vertical-wrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width: 2px;
+    
+}
+
+.vertical-line {
+    position: relative;
+    display: inline-block;
+    background: #888888;
+    opacity: 0.7;
+    height: 70%;
+    width: 100%;
+}
+
+.name-tag, .email-tag, .message-tag {
+    position: relative;
+    font-size: 30px;
+}
+
+.name-field, .email-field {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    margin-left: 2%;
+    font-family: prime;
+    font-size: 30px;
+    width: 90%;
+    height: 90%;
 }
 
 .message-field {
+    position: relative;
+    display: inline-block;
+    border: 3px solid #454545;
     height: 250px;
+    width: 100%;
     margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.name-div:focus, .contact-form textarea:focus {
+    border-color: #66CCFF;
+}
+
+.send {
+    margin: 0 auto;
+    font-size: 2.0em;
+    border: 3px solid #000000;
+    color: #878787;
+    width: 100px;
+    height: 40px;
+    line-height: 39px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.send:hover {
+    color: #000000;
+    border-color: #000000;
+}
+
+.send:active {
+    box-shadow: 1px 1px 2px #454545;
+    text-shadow: 1px 1px 2px #454545;    
 }
 
 .hidden-link {

@@ -39,5 +39,25 @@ $(document).ready(function () {
         e.stopPropagation();
         $(this).find('a')[0].click();
     });
+    $('.name-field').focus(function () {
+        $('.name-div').find("i").css('color', '#000000');
+        $('.name-div').find('.vertical-line').css('background', '#000000');
+        $('.name-div').css('border', '3px solid #66CCFF');
+    });
+    $('.name-field').blur(function () {
+        $('.name-div').find("i").css('color', '#888888');
+        $('.name-div').find('.vertical-line').css('background', '#454545');
+        $('.name-div').css('border', '3px solid #454545');
+    });
+    $('.email-field').focus(function () {
+        $('.email-div').find("i").css('color', '#000000');
+        $('.email-div').find('.vertical-line').css('background', '#000000');
+        $('.email-div').css('border', '3px solid #66CCFF');
+    });
+    $('.email-field').blur(function () {
+        $('.email-div').find("i").css('color', '#888888');
+        $('.email-div').find('.vertical-line').css('background', '#454545');
+        $('.email-div').css('border', '3px solid #454545');
+    });
 });
 
