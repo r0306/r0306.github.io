@@ -152,9 +152,8 @@ body {
 }
 
 .top-container {
-    display: inline-block;
     position: fixed;
-    top: 10px;
+    top: 0.5%;
     right: 0px;
     opacity: 0;
     transition: right 0.5s ease;
@@ -166,15 +165,13 @@ body {
 }
 
 .top-button {
+    position: fixed;
     background-color: #FFFFFF;
     background-repeat: no-repeat;
     background-size: cover; 
     border-radius: 7px;
-    position: fixed;
-    max-width: 10%;
-    max-height: 30%;
-    width: auto;
-    height: auto;
+    height: 40px;
+    margin-left: -2%;
 }
 
 .intro {
@@ -438,10 +435,6 @@ body {
     font-size: 30px;
 }
 
-.name-div:focus, .contact-form textarea:focus {
-    border-color: #66CCFF;
-}
-
 .send {
     margin: 0 auto;
     font-size: 2.0em;
@@ -462,6 +455,10 @@ body {
 .send:active {
     box-shadow: 1px 1px 2px #454545;
     text-shadow: 1px 1px 2px #454545;    
+}
+
+.input-submit {
+    display: none;
 }
 
 .hidden-link {
