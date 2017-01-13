@@ -36,25 +36,25 @@
                 <ul class="list">
                     <li>
                         <a href="#intro">
-                            <b>About</b>
+                            <b id="section-intro">About</b>
                             <span><i class="ion-android-person icon"></i></span>
                         </a>
                     </li>
                     <li>
                         <a href="#projects">
-                            <b>Projects</b>
+                            <b id="section-projects">Projects</b>
                             <span><i class="ion-social-github icon"></i></span>
                         </a>
                     </li>
                     <li>
                         <a href="#resume" target="_blank">
-                            <b>Resume</b>
+                            <b id="section-resume">Resume</b>
                             <span><i class="ion-document icon"></i></span>
                         </a>
                     </li>
                     <li>
                         <a href="#contact">
-                            <b>Contact</b>
+                            <b id="section-contact">Contact</b>
                             <span><i class="ion-android-mail icon"></i></span>
                         </a>
                     </li>
@@ -62,20 +62,20 @@
             </nav>
         </div>
     </div>
-    <div class="intro" id="intro">
+    <div class="intro section unselectable" id="intro">
         <div class="intro-text">
             <img src="assets/img/hi.png" id="hi" class="hi unselectable">
-            <span class="unselectable">My name is <span class="highlight">Robert Lu</span> and I'm currently a third year undergrad student studying computer science at UCSD. I like to code <span class="highlight">simplistic yet robust</span> software.</span>
+            <span>My name is <span class="highlight">Robert Lu</span> and I'm currently a third year undergrad student studying computer science at UCSD. I like to code <span class="highlight">simplistic yet robust</span> software.</span>
             <div class="line"></div>
-            <span class="about unselectable">I first realized my interest in programming when I joined my high school robotics team. I remember being baffled of all the possible movements and actions the robot could perform with just some simple lines of code. Since then, I taught myself how to program and worked my way up, eventually becoming promoted to head developer of the team. By that time, I had resolved to pursue a career in computer science.</span>
-            <span class="about unselectable">I have worked with many different platforms and languages. Two of my favorites are Android and web development because of the accessibility they provide both the developer and the users. I enjoy front end development for the impact it makes on people's impression of your product. At the same time, I also respect back end development for holding everything together and the amount of problem solving that goes into both in order to make the whole product work.</span>
+            <span class="about">I first realized my interest in programming when I joined my high school robotics team. I remember being baffled of all the possible movements and actions the robot could perform with just some simple lines of code. Since then, I taught myself how to program and worked my way up, eventually becoming promoted to head developer of the team. By that time, I had resolved to pursue a career in computer science.</span>
+            <span class="about">I have worked with many different platforms and languages. Two of my favorites are Android and web development because of the accessibility they provide both the developer and the users. I enjoy front end development for the impact it makes on people's impression of your product. At the same time, I also respect back end development for holding everything together and the amount of problem solving that goes into both in order to make the whole product work.</span>
         </div>
     </div>
-    <div class="projects" id="projects">
-        <span class="projects-text">Section still under construction...</span>
+    <div class="projects section unselectable" id="projects">
+        <span class="section-text">Section still under construction...</span>
     </div>
-    <div class="resume" id="resume">
-        <span class="projects-text">My Portfolio</span>
+    <div class="resume section unselectable" id="resume">
+        <span class="section-text">My Portfolio</span>
         <div class="columns">
             <div class="column">
                 <div class="circle"><i class="ion-code"></i></div>
@@ -99,8 +99,18 @@
         </div>
         <div class="resume-link hidden-link"><span>View Resume</span><a class="hidden-link" href="RobertLuResume.pdf" target="_blank"></a></div>
     </div>
-    <div class="contact" id="contact">
-        <span class="projects-text">Contact Me</span>
+    <div class="contact section unselectable" id="contact">
+        <span class="section-text">Contact Me</span>
+        <div class="contact-info">
+            <div>
+                <i class="ion-ios-email"></i>
+                <a class="email-link" href="mailto:robertlu99@yahoo.com?Subject=Referred%20from%20website">robertlu99@yahoo.com</a>
+            </div>
+            <div>
+                <i class="ion-ios-telephone"></i>
+                <span>(650) 302-3138</span>
+            </div>
+        </div>
         <form class="contact-form" action="http://robertluwebsite.000webhostapp.com/email.php" method="POST">
             <span class="name-tag">Name*</span>
             <div class="name-div">
@@ -109,6 +119,7 @@
                     <div class="vertical-line"></div>
                 </div>
                 <input class="name-field" type="text" name="name" required>
+                <span id="name-error">Please enter your name!</span>
             </div>
             <span class="email-tag">Email*</span>
             <div class="email-div">
@@ -117,14 +128,19 @@
                     <div class="vertical-line"></div>
                 </div>
                 <input class="email-field" type="text" name="email" required>
+                <span id="email-error">Please enter a valid email!</span>
             </div>
             <span class="message-tag">Message*</span>
             <textarea class="message-field" rows="5" name="message" cols="30" required></textarea>
-            <div class="send">Send
+            <span id="message-error">Message is too short!</span>
+            <div class="send" onClick="document.forms['contact-form'].submit();">Send                
                 <input class="input-submit" name="submit" value="Submit" type="submit">
             </div>
         </form>
+        <div class="contact-submission">Your information has been sent. I will be in touch with you shortly. Thank you!</div>
+    </div>
+    <div class="footer">
+        <span>Website Designed and Built by Robert Lu © 2017</span>
     </div>
 </body>
-
 </html>
