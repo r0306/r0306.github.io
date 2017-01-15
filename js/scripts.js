@@ -4,40 +4,60 @@
 var top_save;
 var lastSection;
 
-$(document).ready(function () {
+function handleNavigation() {
     "use strict";
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > $('.navbar').offset().top && $('.navbar').hasClass("sticky") === false) {
-            top_save = $('.navbar').offset().top;
-            $('.navbar').addClass("sticky");
-            setTimeout(function () {
-                $('.navbar').addClass("animate");
-                $('.top-container').addClass("slide");
-            }, 50);
-        } else if ($(this).scrollTop() < top_save && $('.navbar').hasClass("sticky") === true) {
-            $('.navbar').removeClass("sticky");
-            setTimeout(function () {
-                $('.navbar').removeClass("animate");
-                $('.top-container').removeClass("slide");
-            }, 50);
-        }
-        $('.section').each(function () {
-            var windowScroll = $(window).scrollTop(), navHeight = $('.navbar').height();
-            if (windowScroll + navHeight >= $(this).offset().top && windowScroll + navHeight <= $(this).offset().top + $(this).height()) {
-                if (lastSection !== undefined) {
-                    lastSection.removeClass("highlight");
-                    lastSection = undefined;
-                }
-                if (lastSection === undefined) {
-                    $('.navbar #section-' + $(this).attr('id')).addClass("highlight");
-                    lastSection = $('.navbar a #section-' + $(this).attr('id'));
-                }
-            }
-            if (!$('.navbar').hasClass("sticky")) {
+    if ($(document).scrollTop() > $('.navbar').offset().top && $('.navbar').hasClass("sticky") === false) {
+        top_save = $('.navbar').offset().top;
+        $('.navbar').addClass("sticky");
+        setTimeout(function () {
+            $('.navbar').addClass("animate");
+            $('.top-container').addClass("slide");
+        }, 50);
+    } else if ($(document).scrollTop() < top_save && $('.navbar').hasClass("sticky") === true) {
+        $('.navbar').removeClass("sticky");
+        setTimeout(function () {
+            $('.navbar').removeClass("animate");
+            $('.top-container').removeClass("slide");
+        }, 50);
+    }
+    $('.section').each(function () {
+        var windowScroll = $(window).scrollTop(), navHeight = $('.navbar').height();
+        if (windowScroll + navHeight >= $(this).offset().top && windowScroll + navHeight <= $(this).offset().top + $(this).height()) {
+            if (lastSection !== undefined) {
                 lastSection.removeClass("highlight");
                 lastSection = undefined;
             }
-        });
+            if (lastSection === undefined) {
+                $('.navbar #section-' + $(this).attr('id')).addClass("highlight");
+                lastSection = $('.navbar a #section-' + $(this).attr('id'));
+            }
+        }
+        if (!$('.navbar').hasClass("sticky")) {
+            lastSection.removeClass("highlight");
+            lastSection = undefined;
+        }
+    });
+}
+
+function check_if_in_view() {
+    "use strict";
+    var animation_elements = $.find('.animation'), web_window = $(window), navHeight = $('.navbar').height(), window_height = web_window.height() - navHeight, window_top_position = web_window.scrollTop() + navHeight, window_bottom_position = (window_top_position + window_height);
+    $.each(animation_elements, function () {
+        var element = $(this), element_height = $(element).outerHeight(), element_top_position = $(element).offset().top, element_bottom_position = (element_top_position + element_height);
+        if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+            element.addClass('in-view');
+        }
+    });
+}
+
+$(document).ready(function () {
+    "use strict";
+    $(window).scroll(function () {
+        handleNavigation();
+        check_if_in_view();
+    });
+    $(window).resize(function () {
+        handleNavigation();
     });
     $('.top-button').click(function () {
         $('body,html').animate({
