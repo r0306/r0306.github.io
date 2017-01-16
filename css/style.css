@@ -1,11 +1,11 @@
 @font-face {
     font-family: walkway;
-    src: url(../fonts/Walkway_UltraBold.ttf);
+    src: url(../fonts/Walkway_UltraBold.ttf) format('truetype');
 }
 
 @font-face {
     font-family: prime;
-    src: url(../fonts/Prime.otf);
+    src: url(../fonts/Prime.otf) format('opentype');
 }
 
 html, body {
@@ -109,7 +109,14 @@ body {
     position: relative;
     bottom: -3px;
     text-align: center;
-    padding: 58px 30px 30px 40px;
+    align-content: center;
+    -moz-padding-end: 15px;
+    -moz-padding-start: 1px;
+    -webkit-padding-end: 39px;
+    -webkit-padding-start: 1px;
+    padding-top: 58px;
+    padding-bottom: 30px;
+    padding-left: 40px;
     text-decoration: none;
     transition: 0.5s ease;
 }
@@ -128,7 +135,6 @@ body {
     height: 40px;
     top: 50px;
     left: 39%;
-    right: auto;
     transition: opacity 0.2s;
 }
 
