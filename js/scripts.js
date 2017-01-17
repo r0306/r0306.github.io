@@ -58,6 +58,7 @@ $(document).ready(function () {
     });
     $(window).resize(function () {
         handleNavigation();
+        check_if_in_view();
     });
     $('.top-button').click(function () {
         $('body,html').animate({
@@ -139,5 +140,10 @@ $(document).ready(function () {
         $('.contact-form').css('display', 'none');
         $('.contact-submission').css('display', 'inline');
         return false;
+    });
+    $('.project-hover').hover(function () {
+        $('.project-description#' + $(this).attr('id')).stop().fadeIn();
+    }, function () {
+        $('.project-description#' + $(this).attr('id')).stop().fadeOut();
     });
 });
