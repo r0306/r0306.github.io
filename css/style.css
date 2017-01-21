@@ -187,30 +187,27 @@ body {
 }
 
 .intro {
-    display: block;
-    height: 100%;
+    position: relative;
+    display: inline-block;
     width: 100%;
     background: #FFFFFF;
-    color: #454545;
-    padding-bottom: 90px;
-    overflow: hidden;
+    color: #454545;    
+    overflow: auto;
 }
 
 .intro-text {
     position: relative;
+    display: block;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    margin-left: auto;
+    margin-right: auto;
     width: 800px;
     font-family: prime;
     font-size: 2.0em;
     font-weight: 100;
-    top: 400px;
     word-wrap: break-word;
     z-index: 0;
-}
-
-.intro-text {
-    position: relative;
-    margin: 0 auto;
-    color: #878787;
 }
 
 .intro-text span {
@@ -233,6 +230,7 @@ body {
 }
 
 .about {
+    position: relative;
     display: inline-block;
     padding-top: 20px;
     font-size: 0.6em;
@@ -244,7 +242,6 @@ body {
     text-align: center;
     align-content: center;
     background: #F0F0F0;
-    height: 100%;
     width: 100%;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -544,8 +541,7 @@ body {
     position: relative;
     font-size: 2.5em;
     display: none;
-    top: 300px;
-    padding-top: px;
+    top: 100px;
 }
 
 .vertical-wrapper {
